@@ -1,0 +1,69 @@
+.section-title h1 {
+  text-align: center;
+  font-size: 36px;
+  padding-top: 90px;
+  font-family: gintoNordLight;
+
+  padding-bottom: 30px;
+  color: #000;
+
+  padding: 0;
+}
+.section-title::after {
+  content: '';
+  height: 3px;
+  background: #604d53;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/****************/
+/*	 BX-SLIDER 	*/
+/****************/
+section.client {
+  align-content: center;
+  padding: 90px 0em;
+  background-color: #f7f7f7;
+}
+section.client .section-title {
+  margin-bottom: 6em;
+}
+
+.bx-wrapper {
+  max-width: 2700px !important;
+  background-color: transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+}
+.bx-controls {
+  position: relative;
+}
+.bx-wrapper .bx-pager {
+  text-align: center;
+  padding-top: 30px;
+}
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.bx-wrapper .bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.carousel-client {
+  padding-bottom: 80px;
+}

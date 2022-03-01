@@ -1,0 +1,151 @@
+.newProduct {
+  flex: 4;
+}
+
+.addProductForm {
+  margin-top: 10px;
+}
+
+.addProductItem {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.addProductItem > label {
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.addProductItem > input {
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.addProductItem > select {
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+.addProductItem > button {
+  margin-bottom: 1rem;
+  padding: 10px;
+}
+
+.box > select {
+  padding: 10px;
+}
+
+.addProductButton {
+  margin-left: 4px;
+  cursor: pointer;
+  color: #f7f7f7;
+  font-weight: bolder;
+  padding: 7px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  margin-bottom: 3rem;
+  background-color: darkblue;
+}
+
+.buttonVariacoesRemover {
+  cursor: pointer;
+  padding: 7px;
+  margin-left: 4px;
+  color: #f7f7f7;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  background-color: #c3423f;
+  margin-bottom: 3rem;
+  font-weight: bolder;
+}
+
+.buttonVariacoesAdicionar {
+  cursor: pointer;
+  color: #f7f7f7;
+  font-weight: bolder;
+  padding: 7px;
+  margin-left: 4px;
+  background-color: #9bc53d;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  margin-bottom: 3rem;
+}
+
+.instrucoes {
+  color: red;
+  margin-bottom: 1rem;
+}
+input[type='checkbox'] {
+  display: none;
+}
+.wrap-collabsible {
+  margin: 1.2rem 0;
+}
+.lbl-toggle {
+  display: block;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: #ddd;
+  background: #0069ff;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+.lbl-toggle:hover {
+  color: #fff;
+}
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0.7rem;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-out;
+}
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.collapsible-content .content-inner {
+  background: rgba(0, 105, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 105, 255, 0.45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 0.5rem 1rem;
+}
+.collapsible-content p {
+  margin-bottom: 0;
+}
+
+.box {
+}

@@ -1,0 +1,12 @@
+.containerArrows {
+  display: inline-block;
+}
+
+.tituloSlider {
+  font-family: gintoTituloBold !important;
+  font-weight: bold;
+}
+
+.arrowleft {
+  margin-bottom: 5rem;
+}

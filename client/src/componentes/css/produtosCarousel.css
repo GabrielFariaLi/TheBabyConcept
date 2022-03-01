@@ -1,0 +1,252 @@
+.container .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+#itemProdutosCarousel {
+  background-color: transparent !important;
+  min-width: 340px;
+  max-width: 340px;
+  min-height: 500px;
+  max-height: 500px;
+}
+
+.imagemProduto {
+  background-size: contain;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover !important;
+}
+
+.container .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.container .carousel .item {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 280px;
+  border-radius: 16px;
+  flex: none;
+}
+
+.container .carousel .item .image img {
+  width: 100%;
+  border-radius: 5px;
+  min-height: 313px;
+  max-height: 313px;
+  object-fit: cover;
+}
+#imagemProdutoCarousel {
+  position: relative;
+}
+
+#itemProdutosCarousel:hover .infoProdutoCarousel {
+  opacity: 1;
+}
+
+.container .carousel .item .info {
+  font-family: 'Poppins', sans-serif;
+  height: 140px; /* diminuir espaçamento*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .carousel .item .info span {
+  display: block;
+  text-align: start;
+  color: #1e1e1e;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.espacamentoSemSaldo {
+  min-height: 24px;
+  max-height: 24px;
+}
+
+.container .carousel .item .info .name {
+  font-size: 20px;
+  font-weight: bold;
+
+  margin: 8px 0;
+  color: black;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  vertical-align: center;
+  min-height: 38px;
+  line-height: 19px;
+  padding: 0px !important;
+  text-transform: capitalize;
+}
+
+.container .carousel .item .info .oldPrice {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+
+  color: #e81a5d;
+}
+
+.precoAntigo {
+  display: inline-block;
+  margin-bottom: 0px;
+  font-size: 15px;
+  text-decoration: line-through;
+
+  color: #808080;
+  opacity: 0.5;
+}
+
+.precoAtual {
+  font-size: 20px;
+  flex-direction: row;
+}
+.break {
+  flex-basis: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.desconto {
+  border-radius: 3px;
+}
+.desconto {
+  align-self: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  margin-top: 2px;
+
+  position: relative;
+  display: inline-block;
+  background-color: #9db9ce;
+  width: auto;
+  height: 19px;
+  line-height: 22px;
+  font-size: 0.85rem;
+
+  color: #f7f7f7;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-left: 15px !important;
+}
+.desconto:after {
+  content: ' ';
+  height: 13.93px;
+  width: 13.93px;
+  background: #9db9ce;
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  border-radius: 4px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.desconto:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #f7f7f7;
+  position: absolute;
+  top: 6.5px;
+  left: 2px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.item-price {
+  font-size: 13px;
+}
+.item-price strike {
+  opacity: 0.7;
+  flex-grow: 1;
+}
+
+.container .carousel .item .info .price {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ff7e3b;
+}
+
+.container .buttons {
+  width: 100%;
+  text-align: center;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 1024px) {
+  .buttonRight {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+
+    right: 0px !important;
+  }
+
+  .buttonLeft {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0px !important;
+  }
+}
+
+.buttonRight {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+
+  right: -55px;
+}
+
+.backgroundArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+}
+
+.carousel-indicators {
+  margin-bottom: 60px;
+}
+
+.buttonLeft {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: -55px;
+}
+
+#containerProdutosCarousel {
+  position: relative;
+}
+.container .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .buttons button:first-child img {
+  transform: rotate(180deg);
+}

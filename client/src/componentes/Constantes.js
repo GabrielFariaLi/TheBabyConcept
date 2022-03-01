@@ -1,0 +1,1 @@
+export const MAX_TAMANHO_NEWBORN = 14;

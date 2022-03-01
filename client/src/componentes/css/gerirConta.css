@@ -1,0 +1,278 @@
+.itemNavegacaoGerirConta {
+  min-height: 34px;
+  max-height: 34px;
+  white-space: nowrap;
+
+  padding-top: 7px;
+  padding-left: 5px;
+
+  border-left: 3px solid black;
+}
+#tabelaAcompanharPedidos {
+}
+table {
+  max-width: 100vh !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+tr:nth-of-type(odd) {
+  background: #6d96b6;
+}
+tr:nth-of-type(even) {
+  background: #9db9ce;
+}
+.containerNavegacaoGerirConta {
+  flex-direction: column;
+  font-size: 16px;
+  margin-right: 30px;
+}
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tg td {
+  line-height: 150px;
+
+  border-color: rgba(0, 0, 0, 0.4);
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 12px 20px;
+  word-break: normal;
+}
+.tg th {
+  min-width: 150px;
+  max-height: 43px !important;
+  border-color: rgba(11, 60, 73, 0.4);
+  border-style: solid;
+  border-width: 1px;
+  background-color: #0b3c49;
+  color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 12px 20px;
+  word-break: normal;
+}
+
+.tg2 {
+  white-space: nowrap;
+  line-height: 150px !important;
+}
+
+.containerPrincipalGerirConta {
+  margin-bottom: 150px;
+  margin-top: 100px;
+}
+
+.imagemTabelaProduto {
+  min-width: 130px;
+  max-width: 130px;
+  max-height: 130px;
+  min-height: 130px;
+}
+@media only screen and (max-width: 1163px) {
+  .itemNavegacaoGerirConta {
+    margin-left: 50px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .containerNavegacaoAcompanharPedidos {
+    width: 100%;
+  }
+
+  .itemNavegacaoGerirConta {
+    margin-left: 85px !important;
+  }
+}
+
+@media only screen and (max-width: 931px) {
+  .itemNavegacaoGerirConta {
+    margin-left: 85px !important;
+  }
+}
+
+@media only screen and (max-width: 821px) {
+  .containerNavegacaoAcompanharPedidos {
+    width: 100%;
+  }
+  .itemNavegacaoGerirConta {
+    margin-left: 70px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .itemNavegacaoGerirConta {
+    margin-left: 20px !important;
+  }
+
+  .espacamentoAcompanharPedidos {
+    width: 100%;
+  }
+
+  #tabelaAcompanharPedidos {
+    margin-left: 20px !important;
+  }
+}
+@media only screen and (max-width: 724px) {
+  table {
+    margin-top: 20px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 100% !important;
+  }
+  .tg2 {
+    width: 100vh !important;
+    padding-right: 0px !important;
+    overflow-wrap: break-word !important;
+    line-height: 30px !important;
+    color: black;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #6d96b6;
+  }
+  tr:nth-of-type(even) {
+    background: #9db9ce;
+  }
+  .itemNavegacaoGerirConta {
+    margin-left: 0px !important;
+  }
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 1px;
+    width: 45%;
+
+    white-space: nowrap;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: 'Código da encomenda';
+    padding-top: 20px;
+  }
+  td:nth-of-type(2):before {
+    content: 'Data da encomenda';
+  }
+  td:nth-of-type(3):before {
+    content: 'Valor pago';
+  }
+  td:nth-of-type(4):before {
+    content: 'Estado da encomenda';
+  }
+}
+@media only screen and (max-width: 412px) {
+  .containerNavegacaoGerirConta {
+    margin-left: 5px !important;
+  }
+  #tabelaAcompanharPedidos {
+    margin-left: 0px !important;
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 100% !important;
+  }
+  .tg2 {
+    width: 390px !important;
+    padding-right: 0px !important;
+    overflow-wrap: break-word !important;
+    line-height: 30px !important;
+    color: black;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #6d96b6;
+  }
+  tr:nth-of-type(even) {
+    background: #9db9ce;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 1px;
+    width: 45%;
+
+    white-space: nowrap;
+  }
+
+  /*
+	Label the data
+	*/
+  td:nth-of-type(1):before {
+    content: 'Código da encomenda';
+    padding-top: 20px;
+  }
+  td:nth-of-type(2):before {
+    content: 'Data da encomenda';
+  }
+  td:nth-of-type(3):before {
+    content: 'Valor pago';
+  }
+  td:nth-of-type(4):before {
+    content: 'Estado da encomenda';
+  }
+}

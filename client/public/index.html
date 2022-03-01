@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- BOX  SLIDER   -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(window).load(function () {
+          $('.carousel-client').bxSlider({
+            auto: true,
+            slideWidth: 234,
+            minSlides: 2,
+            maxSlides: 5,
+            controls: false,
+          });
+        });
+
+        $('#containerHamburgerMenu').click(function () {
+          $('#Marca_BabyConcept_NavBar_MOBILE').toggle();
+        });
+
+        $('#btnCorControl').click(function () {
+          $('#IDCorBotaoDetalhesProdutos').toggleClass(
+            'CorBotaoDetalhesProdutos'
+          );
+        });
+
+        $('.dropdownMarcas').click(function () {
+          $(this).toggleClass('toggleMinusPlus');
+        });
+
+        var alterClass = function () {
+          var ww = document.body.clientWidth;
+          if (ww < 821) {
+            $('#filtroCategoriaContainer').addClass('collapse');
+          } else if (ww >= 821) {
+            $('#filtroCategoriaContainer').removeClass('collapse');
+          }
+        };
+        $(window).resize(function () {
+          alterClass();
+        });
+        //Fire it when the page first loads:
+        alterClass();
+      });
+      $(window).on('load', function () {
+        $('.carousel-client').bxSlider({
+          auto: true,
+          slideWidth: 234,
+          minSlides: 2,
+          maxSlides: 5,
+          controls: false,
+        });
+      });
+    </script>
+    <!-- FIM BOX  SLIDER   -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--POPPER + JS BOOTSTRAP-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+    <title>React App</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

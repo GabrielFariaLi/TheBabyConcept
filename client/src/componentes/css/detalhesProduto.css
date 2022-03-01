@@ -1,0 +1,50 @@
+.AdicionarQuantidadeCarrinho {
+  min-width: 39px;
+  border-radius: 4px;
+  min-height: 48px;
+
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.QuantidadeContainer {
+  min-height: 48px;
+}
+
+.RemoverQuantidadeCarrinho {
+  border-radius: 4px;
+  min-width: 39px;
+  min-height: 48px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.dropdownFiltroTamanhoDetalhesProdutos {
+}
+
+#id_filtroTamanhoOption {
+  padding: 15px !important;
+}
+
+.QuantidadeResponsivel {
+  min-width: 39px;
+  min-height: 48px;
+  border: 1px solid grey;
+}
+
+.botaoAdicionarCarrinhoDetalhesProdutos {
+}
+
+#btnCorControl {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .botaoAdicionarCarrinhoDetalhesProdutos {
+    margin-left: 100%;
+  }
+
+  .AdicionarContainer {
+    flex-direction: column;
+  }
+}

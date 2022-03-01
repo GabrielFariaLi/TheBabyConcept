@@ -1,0 +1,84 @@
+@font-face {
+  src: url(componentes/fonts/Orelo\ Variable\ Regular.ttf);
+  font-family: oreloTitulo;
+}
+
+@font-face {
+  src: url(componentes/fonts/Cattilo.ttf);
+  font-family: cattiloDetalhes;
+}
+
+@font-face {
+  src: url(componentes/fonts/Ginto\ Regular.ttf);
+  font-family: gintoTitulo;
+}
+@font-face {
+  src: url(componentes/fonts/Ginto\ Nord\ Hairline.ttf);
+  font-family: gintoNordHairline;
+}
+
+@font-face {
+  src: url(componentes/fonts/Ginto\ Nord\ Light.ttf);
+  font-family: gintoNordLight;
+}
+
+@font-face {
+  src: url(componentes/fonts/Ginto\ Nord\ Bold.ttf);
+  font-family: gintoTituloBold;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: gintoNordLight;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input {
+  border-radius: 4px;
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: #f8e9f0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f8e9f0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b3c49;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9db9ce;
+}
+
+/*
+Rosa claro: #F8E9F0
+Azul claro: #9DB9CE
+Verde Claro: #CCF5AC
+Azul escuro: #0B3C49
+Marrom: #604D53
+Preto: #141414
+Branco: #F7F7F7
+
+*/

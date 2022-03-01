@@ -1,0 +1,58 @@
+.imagemBannerChamativo {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.image-element {
+  padding: 0px !important;
+}
+
+.paragraphs-wrapper {
+  padding-right: 140px !important;
+}
+
+.botaoBannerConhecaMais {
+  padding: 15px 24px 15px 24px !important;
+}
+
+.info_div {
+  padding: 4rem;
+}
+
+.containerInfoBannerChamativo {
+  background: url('https://firebasestorage.googleapis.com/v0/b/baby-concept20.appspot.com/o/banner%20chamativo%20fundo.png?alt=media&token=c83c506d-5b51-4cb0-a98c-98884162dac7')
+    center center no-repeat;
+  background-size: 100%;
+  padding: 0px;
+  object-fit: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container-fluid {
+  background-color: #9db9ce;
+  color: white;
+}
+
+.botaoBannerConhecaMais {
+  font-size: 16px;
+  padding: 15px 40px 15px 40px !important;
+}
+
+.mbr-section-title {
+  font-family: gintoNordLight;
+}
+.brown {
+  font-family: gintoTituloBold;
+}
+
+@media (max-width: 600px) {
+  .paragraphs-wrapper {
+    padding-right: 40px !important;
+  }
+}

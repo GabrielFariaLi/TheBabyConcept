@@ -1,0 +1,90 @@
+.card {
+  max-width: 200px !important;
+}
+
+.card-body {
+  max-width: 200px !important;
+}
+
+.dropdownMarcas {
+  text-align: start !important;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.linkDireto {
+  text-align: start !important;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+.dropdownMarcas.toggleMinusPlus:after {
+  vertical-align: middle;
+  content: '-';
+  border-top: none;
+}
+
+.dropdownMarcas:after {
+  vertical-align: middle;
+  content: '+';
+  border-top: none;
+}
+
+.dropdownPorCategorias {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dropdownPorCategorias-Childs {
+  font-weight: 500;
+  margin-left: 1rem;
+  font-size: 18px;
+}
+.dropdownPorCategorias-SecondChild {
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 2rem;
+}
+.dropdownPorCategorias-ThirdChild {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 100;
+
+  margin-left: 3rem;
+}
+
+.tamanhoFiltroScrollable {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.dropdownMarginTop {
+  margin-top: 0.5rem;
+}
+input[type='checkbox'] {
+  display: none;
+}
+.toggle:checked ~ .dropdownMarcas::after {
+  vertical-align: middle;
+  content: '-';
+  border-top: none;
+}
+
+#collapseMarca,
+#collapseCor {
+  padding-bottom: 1rem;
+}
+#botaoFiltroCategoriaContainer {
+  display: none;
+  background-color: #9db9ce;
+  border: 2px solid #9db9ce;
+}
+
+@media (max-width: 821px) {
+  #botaoFiltroCategoriaContainer {
+    display: block;
+  }
+}

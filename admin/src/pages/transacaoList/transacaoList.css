@@ -1,0 +1,80 @@
+.productList {
+  flex: 4;
+}
+
+.productListItem {
+  display: flex;
+  align-items: center;
+}
+
+.productListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.productListEdit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.productListDelete {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.float {
+  position: fixed;
+  width: 110px;
+  height: 110px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #3bb077;
+  color: #fff;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.addProdutoButton {
+  font-style: none;
+  display: inline-block;
+  width: 100%;
+  border-style: none;
+  color: #fff;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 1000;
+
+  font-size: 23px;
+}
+
+.widgetSmButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 10px;
+  background-color: #eeeef7;
+  color: #555;
+  cursor: pointer;
+}
+
+.widgetSmIcon {
+  font-size: 16px !important;
+  margin-right: 5px;
+}

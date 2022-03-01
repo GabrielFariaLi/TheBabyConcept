@@ -1,0 +1,84 @@
+.salvarAgoraButton {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-top: 5rem;
+  flex: 1;
+  max-width: 200px;
+  border: none;
+  background-color: #0b3c49;
+  color: white;
+  font-weight: 600;
+  border: 1px solid grey;
+  margin-left: auto;
+}
+#inputEmailGerirConta {
+  margin-top: 30px !important;
+}
+.deletarContaButton {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-top: 5rem;
+  flex: 1;
+  border: 1px solid grey;
+  max-width: 200px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+}
+
+.marginLeftRight {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+@media only screen and (max-width: 822px) {
+  .deletarContaButton {
+    max-width: 150px;
+  }
+  .containerMeusDetalhesEditar {
+    margin-left: 200px !important;
+  }
+  .CentralizarLabelInput > input {
+    border: 0.5px solid black;
+    margin-bottom: 15px;
+  }
+  .labelInputGerirContaEditar {
+    margin-left: 0.5rem;
+  }
+
+  .labelInputGerirContaEditar > input {
+    margin-left: 0.5rem;
+  }
+
+  .inputMeusDetalhesEditar {
+    margin-left: 30px !important;
+  }
+  .inputMeusDetalhesEditarTelefone {
+    margin-left: 15px !important;
+  }
+}
+@media only screen and (max-width: 413px) {
+  .salvarAgoraButton {
+    margin-left: 50px;
+    white-space: nowrap;
+  }
+  .deletarContaButton {
+    white-space: nowrap;
+  }
+  #inputEmailGerirConta {
+    border: 0.5px solid black;
+  }
+  .CentralizarLabelInput > input {
+    border: 0.5px solid black;
+    margin-bottom: 15px;
+  }
+  .labelInputGerirContaEditar {
+    margin-left: 0.5rem;
+  }
+  .linhaDivisoriaDetalhes {
+    width: 310px;
+  }
+
+  .containerNavegacaoGerirConta {
+    margin-left: 48px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,318 @@
+.navbar .megamenu {
+  padding: 2rem 7rem 2rem 7rem;
+}
+#containerHamburgerMenu {
+  border: none;
+}
+.tituloMegaMenu {
+  font-weight: 600;
+}
+.infoTituloMegaMenu {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#floatingSearch {
+  border-radius: 0.25rem 0px 0px 0.25rem;
+}
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .has-megamenu {
+    position: static !important;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#form1 {
+  align-self: center;
+  height: 100%;
+  border: 1px solid rgba(255, 0, 0);
+}
+#form1:focus {
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+#floatingPassword {
+  background-color: #fefefe;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#botao_navbar_buscar {
+  color: #fff;
+  background-color: #9db9ce;
+  border-color: #9db9ce;
+}
+
+.logoGeralNavbarDesktop {
+  justify-self: start;
+}
+
+.imagemNavBarMegaMenuMenina {
+  background: url('https://i.ibb.co/M6Ckrn3/MARTIN-ARANDA-FW2022-3825ok.jpg')
+    center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imagemNavBarMegaMenuMenino {
+  background: url('https://i.ibb.co/c2cqcdB/MARTIN-ARANDA-FW2022-3723ok.jpg')
+    center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imagemNavBarMegaMenuCerimonias {
+  background: url('https://i.ibb.co/Cn0JkqD/MARTIN-ARANDA-FW2022-437ok.jpg')
+    center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imagemNavBarMegaMenuMarcas {
+  background: url('https://firebasestorage.googleapis.com/v0/b/baby-concept20.appspot.com/o/1645414769221Logo%20sozinha%20png.jpg?alt=media&token=7c53090e-62e2-466f-967f-e36147a811b0')
+    center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.PrimeiraLinha {
+  min-height: 75px;
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 20% 60% 20%; /*fraction*/
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.container-flex {
+}
+
+#Marca_BabyConcept_NavBar {
+  margin-left: 109px;
+  justify-self: start;
+}
+
+.form-floating {
+}
+
+#Barra_Pesquisa_NavBar {
+  min-width: 500px;
+}
+
+#dropdownMenuButton {
+  background-color: transparent;
+  color: #9db9ce;
+  border-top-left-radius: 20rem !important;
+  border-bottom-left-radius: 20rem !important;
+  border-top-right-radius: 20rem !important;
+  border-bottom-right-radius: 20rem !important;
+  border: transparent !important;
+  border-color: transparent !important;
+  outline: 0 !important;
+  margin-right: 30px;
+}
+
+#dropdownMenuButton:focus {
+  outline: 0 !important;
+}
+
+.iconCarrinhoNavbar,
+.iconCarrinhoNavbar :hover {
+  color: #9db9ce;
+}
+.dropdown-menu {
+  z-index: 9997;
+}
+#drop .dropdown {
+  outline: 0;
+}
+.logoTipografia {
+  color: #9db9ce !important;
+}
+.logoTipografia2 {
+  color: #f7f7f7 !important;
+}
+
+.logoTipografia,
+.logoTipografia :hover {
+  color: #9db9ce;
+}
+
+.navegadorTotal {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 4000;
+  font-family: 'Poppins', sans-serif;
+  position: sticky !important;
+}
+
+.nav-link {
+  color: #f7f7f7 !important;
+  text-transform: uppercase;
+  padding-right: 40px !important;
+  font-size: 18px;
+}
+
+#saldosNavLink {
+  padding-right: 0px !important;
+}
+
+#segundaLinhaNavBar {
+  background-color: #9db9ce !important;
+  max-height: 45px !important;
+  font-family: 'Poppins', sans-serif;
+}
+.labelParaDesktop,
+.labelParaMobile {
+  color: #9db9ce !important;
+}
+.container-flex {
+  background-color: #9db9ce;
+  z-index: 3000;
+}
+
+.logoIconBabyConceptNavbar {
+  max-width: 30px;
+  min-width: 30px;
+}
+
+.labelParaMobile {
+  visibility: hidden;
+}
+
+#Marca_BabyConcept_NavBar_MOBILE {
+  display: none;
+}
+
+/* ============ desktop view .end// ============ */
+
+/* MOBILE */
+/* ============ mobile view ============ */
+
+@media (max-width: 1340px) {
+  #Marca_BabyConcept_NavBar {
+    place-self: center;
+  }
+  .logoIconBabyConceptNavbar {
+    display: block !important;
+
+    max-width: 55px;
+    min-width: 55px;
+  }
+  .logoTipografia {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .logoIconBabyConceptNavbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar.fixed-top .navbar-collapse,
+  .navbar.sticky-top .navbar-collapse {
+    overflow-y: auto;
+    max-height: 90vh;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .PrimeiraLinha {
+    grid-template-columns: 0% 70% 30%; /*fraction*/
+  }
+
+  .logoIconBabyConceptNavbar {
+    display: none !important;
+
+    max-width: 55px;
+    min-width: 55px;
+  }
+
+  #Marca_BabyConcept_NavBar_MOBILE {
+    justify-self: center;
+    display: block;
+  }
+  #dropdownMenuButton {
+    margin-right: 0px;
+    padding-right: 12px;
+    padding-left: 0px;
+  }
+  #Barra_Pesquisa_NavBar {
+    align-self: end;
+    min-width: 480px;
+    max-width: 220px;
+  }
+  .labelParaDesktop {
+    padding: 0.5rem 0.75rem !important;
+  }
+  .labelParaDesktop,
+  #floatingPassword {
+    min-height: 65px;
+  }
+
+  .segundaLinhaItem {
+    width: 100vw;
+  }
+  .logoTipografia2 {
+  }
+
+  .list-unstyled {
+    padding: 30px;
+  }
+
+  #Marca_BabyConcept_NavBar_MOBILE {
+    background-color: #9db9ce;
+  }
+
+  .labelParaMobile {
+    visibility: visible;
+  }
+
+  .labelParaDesktop {
+    visibility: hidden;
+  }
+
+  .container-flex {
+    flex: 20% 80% !important;
+    justify-self: start;
+  }
+
+  #segundaLinhaNavBar {
+    justify-content: start !important;
+    flex: 20% 80% !important;
+    max-height: 55px !important;
+  }
+
+  #main_nav {
+    justify-self: start !important;
+  }
+
+  .navbar-toggler {
+    flex-basis: 20% !important;
+  }
+
+  .navbar-toggler:active + #Marca_BabyConcept_NavBar_MOBILE {
+    opacity: 0 !important;
+    display: none;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 412px) {
+  #Barra_Pesquisa_NavBar {
+    align-self: end;
+    min-width: 220px;
+    max-width: 220px;
+  }
+}
+
+/* ============ mobile view .end// ============ */

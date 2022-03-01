@@ -1,0 +1,175 @@
+/* MOBILE VIEW */
+@media (max-width: 1024px) {
+  #containerProdutosCarousel {
+  }
+}
+
+.container .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  min-height: 600px;
+}
+
+#itemProdutosCarousel {
+  background-color: transparent !important;
+}
+
+.container .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.container .carousel .item {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 280px;
+
+  border-radius: 16px;
+  flex: none;
+}
+
+.container .carousel .item .image img {
+  width: 100%;
+  min-height: 368px;
+  max-height: 368px;
+  object-fit: cover;
+}
+#imagemProdutoCarousel {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 20px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 4px;
+  position: relative;
+}
+#itemProdutosCarousel:hover .infoProdutoCarousel {
+  opacity: 1;
+}
+
+.espacamentoSemSaldo {
+  min-height: 24px;
+  max-height: 24px;
+}
+
+.container .carousel .item .info {
+  height: 140px; /* diminuir espaçamento*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container .carousel .item .info span {
+  display: block;
+  text-align: center;
+  color: #1e1e1e;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.container .carousel .item .info .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: black;
+}
+
+.info {
+  justify-content: flex-end;
+}
+
+.name {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.name::before {
+  vertical-align: middle;
+}
+
+.container .carousel .item .info .oldPrice {
+  font-size: 14px;
+  text-decoration: line-through;
+
+  color: #000000;
+}
+
+.precoAntigo {
+  text-decoration: line-through;
+
+  color: #000000;
+}
+
+.precoAtual {
+  margin-bottom: 19px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.botaoComprarProduto,
+.botaoComprarProduto2 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 4px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #0b3c49;
+  color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.botaoComprarProduto {
+  flex-basis: 98%;
+}
+.botaoComprarProduto2 {
+  flex-basis: 2%;
+  margin-left: 12px !important;
+}
+.divBotoesProdutoItem {
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.desconto {
+  color: #f7f7f7;
+  background-color: #ccf5ac;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 0.2px;
+  padding-bottom: 0px !important;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+.item-price {
+  font-size: 13px;
+}
+.item-price strike {
+  opacity: 0.7;
+  flex-grow: 1;
+}
+
+.container .carousel .item .info .price {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ff7e3b;
+}
+
+.container .buttons {
+  width: 100%;
+  text-align: center;
+}
+
+#containerProdutosCarousel {
+  flex-basis: 33.333333%;
+}
+
+.container .buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .buttons button:first-child img {
+  transform: rotate(180deg);
+}
