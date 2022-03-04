@@ -11,6 +11,7 @@ import {mobile} from "../responsivel"
 import { useLocation } from "react-router";
 import { useState, useEffect } from "react";
 
+
 import {
   marcasFiltro,
   coresFiltro,
@@ -59,7 +60,7 @@ const Titulo = styled.h1`
 
 const FiltroContainer = styled.div`
 display:flex;
-float: left;
+
 flex:1;
 transition-timing-function: ease;
 justify-content:space-between;
@@ -67,9 +68,10 @@ max-width: 326px;
 min-width: 326px;
 max-height:50vh;
 display: inline-block;
-
+float: left;
 overflow-y: auto;
 overflow-x: hidden;
+
 `;
 
 const Filtro = styled.div`
@@ -80,6 +82,7 @@ transition-timing-function: ease;
 display: flex;
 flex-direction: column;
 ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
+
 
 `;
 
@@ -163,7 +166,17 @@ const CategoriaProduto = () => {
 
   const [organizar,setOrganizacao] = useState("Recente");
   const [filtros,setFiltros] = useState({});
+  useEffect(() => {
+    const mySidenav = document.querySelector('#filtroCategoriaContainer');
 
+      if (window.innerWidth < 440) {
+          mySidenav.classList.add('collapse');
+      }
+      else {
+          mySidenav.classList.remove('collapse');
+      }
+
+  }, [])
   useEffect(() => {
 
     if(corSelect && tamanhoSelect) {
@@ -224,9 +237,19 @@ const CategoriaProduto = () => {
 
   };
 
-
+  
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
 
   return (
+
+    
+
     <Container style={{backgroundColor: "#f7f7f7"}}>
       <Navbar/>
       <Anuncios/>

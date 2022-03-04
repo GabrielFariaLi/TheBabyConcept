@@ -28,13 +28,20 @@ display: flex;
   padding: 10px;
   flex-direction:column;
 }
-${mobile({  })}
+@media only screen and (max-width: 440px) {
+  padding: 10px 0px 10px 0px;
+  flex-direction:column;
+}
 `;
 
 const ImgContainer = styled.div`
 
 flex:1;
 padding:50px;
+@media only screen and (max-width: 440px) {
+  padding: 10px 0px 10px 0px;
+  flex-direction:column;
+}
 `;
 
 const Imagem = styled.img`
@@ -49,9 +56,12 @@ object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
-flex:1;
-padding: 0px 50px;
-${mobile({ padding: "10px" })}
+  flex:1;
+  padding: 0px 50px;
+  @media only screen and (max-width: 440px) {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+  }
 `;
 
 const Titulo = styled.h1`
@@ -73,6 +83,10 @@ display: flex;
 align-items: center;
 font-weight: 400;
 font-size: 40px;
+@media only screen and (max-width: 440px) {
+  justify-content:center;
+  text-align: center;
+}
 `;
 
 const FiltroContainer = styled.div`
@@ -82,13 +96,23 @@ const FiltroContainer = styled.div`
   margin: 12px 0px 0px 0px;
   display: flex;
   justify-content: space-between;
-  ${mobile({ width: "100%" })}
+  @media only screen and (max-width: 440px) {
+    width: 100%;
+
+    justify-content:center;
+    text-align: center;
+}
 `;
 
 const Filtro = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  @media only screen and (max-width: 440px) {
+
+  justify-content:center;
+  text-align: center;
+}
 `;
 
 const FiltroTitulo = styled.span`
@@ -127,6 +151,12 @@ const FiltroTamanho = styled.select`
   margin-top: 12px;
   margin-bottom: 55px;
   padding: 5px;
+  @media only screen and (max-width: 440px) {
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content:center;
+  text-align: center;
+}
 `;
 
 const FiltroTamanhoOption = styled.option`
@@ -135,6 +165,7 @@ const FiltroTamanhoOption = styled.option`
   `;
 
 const AdicionarContainer = styled.div`
+
   width: 50%;
   display: flex;
   gap: 1px;
@@ -142,8 +173,11 @@ const AdicionarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top:30px;
-
- 
+  @media only screen and (max-width: 440px) {
+  width: 100%;
+  justify-content:center;
+  text-align: center;
+}
 `;
 
 const QuantidadeContainer = styled.div`
@@ -182,6 +216,12 @@ border-radius: 4px;
   &:hover{
       background-color: #9DB9CE;
   }
+  @media only screen and (max-width: 440px) {
+    margin-top: 20px;
+  margin-left: 0px !important;
+  justify-content:center;
+  text-align: center;
+}
 `;
 const H1 = styled.h1`
 
@@ -205,12 +245,20 @@ const TopButton = styled.button`
   background-color: #f7f7f7;
   color: #141414;
   @media (max-width: 413px) , (max-width:821px) {
-    margin-left:0px;
+    margin-left:10px;
   }
+
 `;
 
 const DetalhesProduto = () => {
 
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
 
   const location = useLocation();
   const id_produto_url = location.pathname.split("/")[2];

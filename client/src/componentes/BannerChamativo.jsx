@@ -15,7 +15,7 @@ const BannerChamativo = () => {
     
             </div>
             <div  class="containerInfoBannerChamativo text-element col-xl-6 ">
-            <div data-aos="zoom-in-up" class="info_div">
+            <div data-aos="zoom-in-down" data-aos-once="true" class="info_div">
                 
                 
                 <h1 class="mbr-section-title mbr-fonts-style pb-4 px-5 mbr-white display-1">

@@ -7,6 +7,8 @@ import {
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./css/produtoItem.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 
 const Info = styled.div`
@@ -63,14 +65,14 @@ const StyledLink = styled(Link)`
 
 const ProdutoItem = ({item}) => {
   return (
-    <div data-aos="zoom-out" className="container mt-5" id="containerProdutosCarousel">
+    <div  className="container mt-5" id="containerProdutosCarousel">
 
       <div className="carousel" style={{ justifyContent: "center"}} >
 
       <div className="item" id="itemProdutosCarousel" key={item._id}>
         <div className="image" id="imagemProdutoCarousel">
           <StyledLink to={`/detalhesProduto/${item._id}`} style={{ textDecoration: 'none' }}>
-            <img class="imagemProduto" src={item.img} alt={item.titulo} />
+            <LazyLoadImage class="imagemProduto" src={item.img} alt={item.titulo} />
           </StyledLink>
           <Info className="infoProdutoCarousel">
             <Icon>

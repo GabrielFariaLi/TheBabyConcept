@@ -21,6 +21,15 @@ import Swal from 'sweetalert2'
 
 const GerirContaEditar = () => {
 
+    
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
   const [pedidos, setPedidos] = useState([]);
   const [inputs, setInputs] = useState({});
   const [informacoesAtuaisUtilizador, setinformacoesAtuaisUtilizador] = useState([]);
@@ -34,7 +43,7 @@ const GerirContaEditar = () => {
   useEffect(() => {
     const getUtilizador = async ()=> {
       try{
-        const res = await userRequest.get("http://localhost:5000/api/utilizador/buscar/" + ID_utilizadorAtual);
+        const res = await userRequest.get("/utilizador/buscar/" + ID_utilizadorAtual);
         setinformacoesAtuaisUtilizador(res.data);
         console.log(informacoesAtuaisUtilizador)
       } catch(err) {}
@@ -53,7 +62,7 @@ const GerirContaEditar = () => {
   const handleClick = (e) => {
     e.preventDefault();
 
-    let doc = userRequest.put(`http://localhost:5000/api/utilizador/${ID_utilizadorAtual}`, inputs);
+    let doc = userRequest.put(`/utilizador/${ID_utilizadorAtual}`, inputs);
     console.log(doc)
     Swal.fire({
       position: 'bottom-end',
@@ -96,7 +105,7 @@ const GerirContaEditar = () => {
           'Sua conta e suas informações foram deletadas',
           'success'
         )
-        let doc = userRequest.delete(`http://localhost:5000/api/utilizador/${ID_utilizadorAtual}`, inputs);
+        let doc = userRequest.delete(`/utilizador/${ID_utilizadorAtual}`, inputs);
         console.log(doc)
         navegarParaHome();
         

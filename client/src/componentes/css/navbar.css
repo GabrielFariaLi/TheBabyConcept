@@ -1,8 +1,18 @@
 .navbar .megamenu {
   padding: 2rem 7rem 2rem 7rem;
 }
+.navegadorTotalMobile {
+  display: none;
+}
+.containerPesquisaMobile {
+  flex: 80% 20%;
+}
 #containerHamburgerMenu {
   border: none;
+}
+
+#containerHamburgerMenu:focus {
+  box-shadow: none;
 }
 .tituloMegaMenu {
   font-weight: 600;
@@ -118,6 +128,8 @@
 
 #dropdownMenuButton:focus {
   outline: 0 !important;
+  box-shadow: none;
+  border: 0;
 }
 
 .iconCarrinhoNavbar,
@@ -307,11 +319,23 @@
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 440px) {
   #Barra_Pesquisa_NavBar {
     align-self: end;
-    min-width: 220px;
-    max-width: 220px;
+    min-width: 100%;
+  }
+
+  #segundaLinhaNavBar {
+    min-height: 75px;
+    max-height: 85px !important;
+  }
+
+  .navegadorTotal {
+    display: none;
+  }
+
+  .navegadorTotalMobile {
+    display: block;
   }
 }
 

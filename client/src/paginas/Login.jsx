@@ -13,7 +13,7 @@ import Copyright from "../componentes/Copyright";
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f7f7f7;
 
   background-size: cover;
@@ -22,6 +22,10 @@ const Container = styled.div`
   justify-content: center;
   @media only screen and (max-width:821px) {
     height:50vh;
+  }
+  @media only screen and (max-width:440px) {
+    min-height: 100vh;
+    padding: 0px 15px 0px 15px;
   }
 
 `;
@@ -43,10 +47,12 @@ const Wrapper = styled.div`
         padding-bottom:50px;
   };
   @media only screen and (max-width:580px) {
+    flex: 1;
       margin-left:10%;
-      width: 380px;
-      padding-top:50px;
-      padding-bottom:50px;
+      width: 100%;
+      height: 65vh;
+      padding: 0px;
+      margin: 0px;
   };
   
 `;
@@ -67,7 +73,7 @@ const WrapperImagem = styled.div`
     width:300px;
     }
   @media only screen and (max-width:580px) {
-      visibility: hidden;
+      display: none;
     }
 
 
@@ -80,12 +86,22 @@ const Titulo = styled.h1`
   ;
  padding-top: 50px;
  padding-bottom: 50px;
+ @media only screen and (max-width:580px) {
+  color: #f7f7f7;
+  padding: 50px 15px 50px 15px;
+  };
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
+  @media only screen and (max-width:580px) {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+  };
 `;
 
 const Input = styled.input`
@@ -96,6 +112,9 @@ const Input = styled.input`
   padding: 10px;
   @media only screen and (max-width:580px), (max-width:821px) {
       width: 300px;
+  };
+  @media only screen and (max-width:580px) {
+    align-self: center;
   };
 `;
 
@@ -115,14 +134,21 @@ const Button = styled.button`
   @media only screen and (max-width:580px), (max-width:821px) {
       width: 300px;
   };
+  @media only screen and (max-width:580px){
+      align-self: center;
+  };
 `;
 
-const LinkElement = styled.a`
+const LinkElement = styled.span`
   margin: 5px 0px 25px 0px;
   font-size: 12px;
-  text-decoration: underline;
+
 
   cursor: pointer;
+  @media only screen and (max-width:580px) {
+
+    margin: 5px 25% 10px 25%;
+  };
 `;
 
 const Error = styled.span`
@@ -136,8 +162,12 @@ const ContainerInformacoes = styled.div`
 const ContainerRegistrar = styled.div`
   display: flex;
   padding-bottom: 1rem;
-  margin-bottom: 500px;
+
   justify-content: center;
+  @media only screen and (max-width:580px) {
+    flex-direction: column ;
+
+  };
 `;
 
 const CenterDiv = styled.div`
@@ -145,6 +175,13 @@ const CenterDiv = styled.div`
       //center;
   display:flex;
   justify-content: center;
+  @media only screen and (max-width:580px) {
+  background: 
+
+    url("https://firebasestorage.googleapis.com/v0/b/baby-concept20.appspot.com/o/foto%20registrar.jpg?alt=media&token=37cf21cc-faf1-468f-abde-d00ba179d51c") top;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  };
 `;
 
 
@@ -186,6 +223,16 @@ const Login = () => {
     e.preventDefault();
     const autenticacao = login(dispatch, { email, password });
   }
+
+    
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
 
  
   return (

@@ -7,6 +7,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 
+
 import "./css/produtos.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -104,26 +105,26 @@ const Produtos = ({categoria, subcategoria, tricategoria, pesquisa, marca, filtr
       try{
         const res = await axiosInstancia.get(
           paginaAtual === "" 
-          ?`http://localhost:5000/api/produto`
+          ?`/produto`
           :
           marca !== "undefined" 
-          ? `http://localhost:5000/api/produto?marca=${marca}`
+          ? `/produto?marca=${marca}`
           :
           pesquisa !== "undefined" 
-          ? `http://localhost:5000/api/produto?pesquisaString=${pesquisa}`
+          ? `/produto?pesquisaString=${pesquisa}`
           :
           tricategoria !== "undefined"  
-          ? `http://localhost:5000/api/produto?categoria=${categoria}&subcategoria=${subcategoria}&tricategoria=${tricategoria}`
+          ? `/produto?categoria=${categoria}&subcategoria=${subcategoria}&tricategoria=${tricategoria}`
           : 
           subcategoria !== "undefined" 
-          ? `http://localhost:5000/api/produto?categoria=${categoria}&subcategoria=${subcategoria}`
+          ? `/produto?categoria=${categoria}&subcategoria=${subcategoria}`
           : 
           categoria === "Marcas" 
-          ? `http://localhost:5000/api/produto`
+          ? `/produto`
           :  
           categoria !== "undefined" 
-          ? `http://localhost:5000/api/produto?categoria=${categoria}`
-          : `http://localhost:5000/api/produto`
+          ? `/produto?categoria=${categoria}`
+          : `/produto`
 
         );
 

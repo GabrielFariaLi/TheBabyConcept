@@ -194,6 +194,9 @@ const DetalhePreco = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom:30px;
+  @media (max-width: 440px){
+display: none;
+  }
 `;
 
 const QuantidadeProdutoContainer = styled.div`
@@ -230,6 +233,7 @@ const Sumario = styled.div`
 
 const SumarioTitulo = styled.h1`
   font-weight: 200;
+  text-align: center;
 `;
 
 const SumarioItem = styled.div`
@@ -256,6 +260,16 @@ border-radius: 4px;
 
 
 const Carrinho = () => {
+
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
+
   const dispatch = useDispatch();
   const utilizadorAtual = useSelector(estado => estado.utilizador.utilizadorAtual)
   const carrinho = useSelector(estado => estado.carrinho); // referencia ao reducer do loja.js
@@ -404,8 +418,8 @@ const checarPaisEscolhido = () => {
                     <IdProduto>
                       <b>ID:</b> {produto._id}
                     </IdProduto>
-                    <b>Cor</b>
-                    <CorProduto color={produto.variacoes[0].cor} />
+                    <b>Cor <b class="quantidadeCompraMobile" > Qnt: {produto.quantidade} <b class="precoCompraMobile" > $ {produto.preco * produto.quantidade}</b></b></b>
+                    <span><CorProduto color={produto.variacoes[0].cor} > </CorProduto></span>
                     <TamanhoProduto>
                       <b>Tamanho:</b> {produto.variacoes[0].tamanho}
                     </TamanhoProduto>

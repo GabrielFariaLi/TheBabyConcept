@@ -9,7 +9,7 @@ import Produtos from '../componentes/Produtos'
 import MarcasSlider from '../componentes/MarcasSlider'
 import Slider from '../componentes/Slider'
 import {mobile} from "../responsivel"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import BannerChamativo from '../componentes/BannerChamativo'
 import ProdutosCarousel from '../componentes/ProdutosCarousel'
 import axios from "axios"
@@ -28,6 +28,18 @@ margin-bottom: 0px;
 
 const Home = () => {
 
+  
+  useEffect(() => {
+    if(!window.location.hash) {
+      window.location = window.location + '#loaded';
+      window.location.reload();
+  }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
 
 
   return (
@@ -41,7 +53,7 @@ const Home = () => {
         <Categorias />
         <H1 className="text-center">Saldos incriveis para você</H1>
         <Produtos categoria={"Saldo"} filtros={{["categorias"]:"Saldo"}} />
-        <MarcasSlider data-aos="zoom-in-right"/>
+        <MarcasSlider data-aos="zoom-in-right" data-aos-once="true"/>
         <BannerChamativo/>
         <H1 className="text-center">Confira os mais novos produtos!</H1>
         <ProdutosCarousel categoria={"New in"} filtros={{["categorias"]:"New in"}} />

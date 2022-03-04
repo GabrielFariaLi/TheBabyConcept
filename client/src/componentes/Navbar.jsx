@@ -102,7 +102,7 @@ const Navbar = () => {
        
                   <input type="text" class="form-control" id="floatingSearch" placeholder="Pesquisar..." onChange={gerirBarraPesquisa}/>
                   <label class="labelParaDesktop" for="floatingSearch">Encontre os melhores produtos para o seu bebe...</label>
-                  <label class="labelParaMobile" for="floatingSearch">Melhores produtos p/ o seu bebe...</label>
+                  <label class="labelParaMobile" for="floatingSearch">Pesquise aqui...</label>
         
                 </div>
              
@@ -196,7 +196,7 @@ const Navbar = () => {
                             <h6 class="tituloMegaMenu">Recém Nascida</h6>
                             <p class="infoTituloMegaMenu">( 0 Meses até 12 Meses )</p>
                             <ul class="list-unstyled">
-                              <li><a href="/produtos/Menina?Recém Nascida">Tudo</a></li>
+                              <li><a href="http://153.92.221.32/produtos/Menina?Recém Nascida">Tudo</a></li>
                               <li><a href="/produtos/Menina?Recém Nascida?Conjuntos">Conjuntos</a></li>
                               <li><a href="/produtos/Menina?Recém Nascida?Vestidos">Vestidos</a></li>
                               <li><a href="/produtos/Menina?Recém Nascida?Calças %26 Calções">Calças & Calções</a></li>
@@ -502,6 +502,411 @@ const Navbar = () => {
 
     
         </nav>
+      </div>
+      <div class="navegadorTotalMobile">
+
+        <nav class="d-flex justify-content-center navbar navbar-expand-lg navbar-dark bg-primary" id="segundaLinhaNavBar">
+          <Link class="ms-2 logoTipografia2" to="/">
+              <Typography
+              
+                id="Marca_BabyConcept_NavBar_MOBILE"
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ display: { xs: 'flex', sm: 'none' } }}
+              >
+                THE BABY CONCEPT
+              </Typography>
+          </Link>
+
+          <div class="PrimeiraLinhaItem " style={{display:"flex", marginLeft:"auto"}} >
+            
+            <div class="ms-2 mt-0.25 dropdown ">
+              <button  class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i style={{color:"#f7f7f7",fontSize:"26px"}} class="far fa-user fa-2x"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {utilizadorAtual == null && (
+                <>
+                <li>
+                  <Link to="/registrar">
+                    <a class="dropdown-item" >Criar Conta</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login">
+                    <a class="dropdown-item" >Login</a>
+                  </Link>
+                </li>
+
+                </>
+              )}
+              {utilizadorAtual != null && (
+                <>
+              
+                <li>
+                <Link to="/gerirContaEditar">
+                    <a class="dropdown-item" >Gerir Conta</a>
+                </Link>
+                </li>
+                <li><hr class="dropdown-divider"/></li>
+                <Link to="/gerirConta">
+                    <a class="dropdown-item" >Acompanhar meus Pedidos</a>
+                </Link>
+                <li><hr class="dropdown-divider"/></li>
+                <li>
+                  <a class="dropdown-item"style={{cursor:"pointer"}}  onClick={() => gerirLogout()}>Logout</a>
+                </li>
+                </>
+              )}
+              </ul>
+            </div>
+
+              
+                <div  class="iconMobileNavBar ms-0 mt-1 me-4 justify-self-center iconCarrinhoNavbar">
+                  <Badge badgeContent={carrinho_quantidade} color="primary">
+                  <Link to="/carrinho">
+                    <ShoppingCartOutlined style={{ fontSize: "2.0em",color:"#f7f7f7" }} />
+                    </Link>
+                  </Badge>
+                </div>
+              
+
+            </div>
+
+          <div style={{marginLeft:"auto"}} class="container-flex ">
+            
+            
+            <button class="navbar-toggler"  id="containerHamburgerMenu" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" onClick={gerirClique}>
+              <span class="navbar-toggler-icon" ></span>
+            </button>
+
+            <div class="collapse navbar-collapse segundaLinhaItem" id="main_nav">
+                <ul class="navbar-nav ">
+                  <li class="nav-item active ">
+                    <a class="nav-link" href="/produtos/New in">New in </a>
+                  </li>                
+                  <li class="nav-item dropdown has-megamenu ">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      Meninas
+                    </a>
+                    <div class="dropdown-menu megamenu" role="menu">
+                      <div class="row g-3">
+                        <div class="col-lg-3 col-6">
+                          <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Recém Nascida</h6>
+                            <p class="infoTituloMegaMenu">( 0 Meses até 12 Meses )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="http://153.92.221.32/produtos/Menina?Recém Nascida">Tudo</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Calças %26 Calções">Calças & Calções</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Casacos %26 Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Blusas %26 Bodys">Blusas & Bodys</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Fatos %26 BabyGrow">Fatos & BabyGrow</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Mantas %26 Sacos">Mantas & Sacos</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Calçado">Calçado</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Gorros %26 Toucas">Gorros & Toucas</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Interiores">Interiores</a></li>
+                              <li><a href="/produtos/Menina?Recém Nascida?Acessórios">Acessórios</a></li>
+
+                            </ul>
+                          </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                        <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Bebé Menina</h6>
+                            <p class="infoTituloMegaMenu">( 3 Meses até 36 Meses )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Menina?Bebé?">Tudo</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Saias %26 Calções">Saias & Calções</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Camisas %26 T-shirts">Camisas & T-shirts</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Casacos %26 Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Blusões">Blusões</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Sapatos">Sapatos</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Gorros %26 Toucas">Gorros & Toucas</a></li>
+                              <li><a href="/produtos/Menina?Bebé?Acessórios">Acessórios</a></li>
+
+
+                            </ul>
+                        </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                        <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Menina</h6>
+                            <p class="infoTituloMegaMenu">( 4 Anos até 16 Anos )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Menina?Criança?">Tudo</a></li>
+                              <li><a href="/produtos/Menina?Criança?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menina?Criança?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Menina?Criança?Saias %26 Calções">Saias & Calções</a></li>
+                              <li><a href="/produtos/Menina?Criança?Camisas %26 T-shirts">Camisas & T-shirts</a></li>
+                              <li><a href="/produtos/Menina?Criança?Casacos %26 Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menina?Criança?Blusões">Blusões</a></li>
+                              <li><a href="/produtos/Menina?Criança?Sapatos">Sapatos</a></li>
+                              <li><a href="/produtos/Menina?Criança?Acessórios">Acessórios</a></li>
+                              <li><a href="/produtos/Menina?Criança?Gorros %26 Toucas">Gorros & Toucas</a></li>
+
+                            </ul>
+                        </div>
+
+                        </div>
+                        <div class="col-lg-3 col-6 imagemNavBarMegaMenuMenina">
+                          <div class="col-megamenu">
+              
+                            <h6 class="tituloMegaMenu"></h6>
+                            <ul class="list-unstyled">
+
+
+
+                            </ul>
+            
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+                  <li class="nav-item dropdown has-megamenu">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      Meninos
+                    </a>
+                    <div class="dropdown-menu megamenu" role="menu">
+                      <div class="row g-3">
+                        <div class="col-lg-3 col-6">
+                          <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Recém Nascido</h6>
+                            <p class="infoTituloMegaMenu">( 0 Meses até 12 Meses )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Menino?Recém Nascido?">Tudo</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Calças & Calções">Calças & Calções</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Casacos & Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Blusas & Bodys">Blusas & Bodys</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Fatos & BabyGrow">Fatos & BabyGrow</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Mantas & Sacos">Mantas & Sacos</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Calçado">Calçado</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Gorros & Toucas">Gorros & Toucas</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Interiores">Interiores</a></li>
+                              <li><a href="/produtos/Menino?Recém Nascido?Acessórios">Acessórios</a></li>
+
+                            </ul>
+                          </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                        <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Bebé Menino</h6>
+                            <p class="infoTituloMegaMenu">( 3 Meses até 36 Meses )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Menino?Bebé?">Tudo</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Saias & Calções">Saias & Calções</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Camisas & T-shirts">Camisas & T-shirts</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Casacos %26 Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Blusões">Blusões</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Sapatos">Sapatos</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Acessórios">Acessórios</a></li>
+                              <li><a href="/produtos/Menino?Bebé?Gorros %26 Toucas">Gorros & Toucas</a></li>
+
+                            </ul>
+                        </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                        <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Menino</h6>
+                            <p class="infoTituloMegaMenu">( 4 Anos até 16 Anos )</p>
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Menino?Criança?">Tudo</a></li>
+                              <li><a href="/produtos/Menino?Criança?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Menino?Criança?Calças %26 Calções">Calças & Calções</a></li>
+                              <li><a href="/produtos/Menino?Criança?Camisas %26 Polos">Camisas & Polos</a></li>
+                              <li><a href="/produtos/Menino?Criança?Casacos %26 Camisolas">Casacos & Camisolas</a></li>
+                              <li><a href="/produtos/Menino?Criança?T-shirt">T-shirt</a></li>
+                              <li><a href="/produtos/Menino?Criança?Blusões">Blusões</a></li>
+                              <li><a href="/produtos/Menino?Criança?Sapatos">Sapatos</a></li>
+                              <li><a href="/produtos/Menino?Criança?Gorros %26 Toucas">Gorros & Toucas</a></li>
+                              <li><a href="/produtos/Menino?Criança?Acessórios">Acessórios</a></li>
+
+                            </ul>
+                        </div>
+
+                        </div>
+                        <div class="col-lg-3 col-6 imagemNavBarMegaMenuMenino">
+                          <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu"></h6>
+                            <ul class="list-unstyled">
+
+                            </ul>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+                  <li class="nav-item dropdown has-megamenu">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      Cerimonias
+                    </a>
+                    <div class="dropdown-menu megamenu" role="menu">
+                      <div class="row g-3">
+                        <div class="col-lg-3 col-6">
+                          <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Cerimonia Bebe</h6>
+                            
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?">Tudo</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Camisas %26 Blusas">Camisas & Blusas</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Calções %26 Tapa-Fraldas">Calções & Tapa-Fraldas</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Fofos">Fofos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Casacos">Casacos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Toucas">Toucas</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Calçado">Calçado</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Bebé?Acessórios">Acessórios</a></li>
+
+                            </ul>
+                          </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-6">
+                        <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Cerimonia Junior</h6>
+                            
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?">Tudo</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Conjuntos">Conjuntos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Vestidos">Vestidos</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Calças %26 Calções">Calças & Calções</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Camisas %26 Blusas">Camisas & Blusas</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Macacão">Macacão</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Casacos %26 Blazers">Casacos & Blazers</a></li> 
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Calçado">Calçado</a></li>
+                              <li><a href="/produtos/Cerimonias?Cerimonia Junior?Acessórios">Acessórios</a></li>
+
+                            </ul>
+                        </div>
+
+                        </div>
+                        <div class="col-lg-3 col-6">
+                          </div>
+                        <div class="col-lg-3 col-6 imagemNavBarMegaMenuCerimonias">
+                        <div class="col-megamenu">
+
+                        </div>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </li>
+                  <li class="nav-item dropdown has-megamenu">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-bs-toggle="dropdown"
+                    >
+                      Marcas
+                    </a>
+                    <div class="dropdown-menu megamenu" role="menu">
+                      <div class="row g-3">
+                        <div class="col-lg-3 col-6">
+                          <div class="col-megamenu">
+                            <h6 class="tituloMegaMenu">Marcas parceiras da BabyConcept</h6>
+                            
+                            <ul class="list-unstyled">
+                              <li><a href="/produtos/Marcas#undefined#Paz Rodrigues"  onClick={refreshPage}>Paz Rodrigues</a></li>
+                              <li><a href="/produtos/Marcas#undefined#Pangasa" onClick={refreshPage}>Pangasa</a></li>
+                              <li><a href="/produtos/Marcas#undefined#Foque"  onClick={refreshPage}>Foque</a></li>
+                              <li><a href="/produtos/Marcas#undefined#Tous Baby"  onClick={refreshPage}>Tous Baby</a></li>
+                              <li><a href="/produtos/Marcas#undefined#Dr.Kids"  onClick={refreshPage}>Dr.Kids</a></li>
+                              <li><a href="/produtos/Marcas#undefined#Cambrass" onClick={refreshPage}>Cambrass</a></li>
+
+                            </ul>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-3 col-6">
+                    </div>
+                    <div class="col-lg-3 col-6">
+                    </div>
+                    <div class="col-lg-3 col-6 imagemNavBarMegaMenuMarcas">
+                    </div>
+
+
+                      </div>
+
+                    </div>
+
+
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="/produtos/Puericultura"> Puericultura </a>
+                  </li>
+
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" id="saldosNavLink" href="/produtos/Saldo"> Saldos </a>
+                  </li>
+
+                </ul>
+
+            </div>
+
+  
+
+          </div> 
+
+
+    
+        </nav>
+        <div class="containerPesquisaMobile d-flex">
+          <div class="form-floating"  style={{width:"100%",position:"relative"}}  id="Barra_Pesquisa_NavBar">
+            
+            <input type="text" class="form-control" id="floatingSearch" placeholder="Pesquisar..." onChange={gerirBarraPesquisa}/>
+    
+            <label class="labelParaMobile" for="floatingSearch">Pesquise aqui...</label>
+            <i onClick={refreshPage} style={{position:"absolute",right:15,top:20,bottom:0,color:"#9DB9CE"}} class="fas fa-search"></i>
+          </div>
+
+         
+
+        </div>
       </div>
       </>
     );

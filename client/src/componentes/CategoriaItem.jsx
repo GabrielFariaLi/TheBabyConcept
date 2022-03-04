@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import {mobile} from "../responsivel"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import 'bootstrap/dist/js/bootstrap.min.js';
+import { useEffect } from 'react';
 
 
 
@@ -54,6 +57,14 @@ const Image = styled.img`
    props.cat ===  'Menina' | props.cat === 'Menino' | props.cat === "Cerimonias"   ? '0px -100px' : '' 
   };
  }
+ @media only screen and (max-width:440px) {
+
+object-position: ${(props) => 
+ props.cat ===  'Menina' | props.cat === 'Menino' | props.cat === "New in"  | props.cat === "Cerimonias"   ? '0px 0px'
+ : ''
+
+};
+}
 `;
 
 const Title = styled.h1`
@@ -87,10 +98,17 @@ const Button = styled.button`
 
 
 const CategoriaItem = ({item}) => {
+
+  useEffect(() => {
+
+  },[])
   return (
-    <Container data-aos="zoom-in"  className="containerCategoriaItem" categoria={item.categoria} >
+    <Container data-aos="zoom-in" data-aos-once="true"  className="containerCategoriaItem" categoria={item.categoria} >
       <Link to={`/produtos/${item.categoria}`}>
-        <Image className="imageCategoriaItem" cat={item.categoria} src={item.img}/>
+        {}
+
+        <LazyLoadImage className="imageCategoriaItem" cat={item.categoria} src={item.img}/>
+
         <Info>
           <Title>
             {item.title}

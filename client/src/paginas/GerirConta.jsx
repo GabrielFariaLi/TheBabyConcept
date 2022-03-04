@@ -19,6 +19,16 @@ import { userRequest, publicRequest } from "../requestMetodos";
 
 
 const GerirConta = () => {
+
+  
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
   const [pedidos, setPedidos] = useState([]);
 
   const utilizadorAtual = useSelector(estado => estado.utilizador.utilizadorAtual)
@@ -33,7 +43,7 @@ const GerirConta = () => {
         window.location.reload();
       }
       try{
-        const res = await userRequest.get("http://localhost:5000/api/pedido/buscar/" + ID_utilizadorAtual);
+        const res = await userRequest.get("/pedido/buscar/" + ID_utilizadorAtual);
         setPedidos(res.data);
         console.log(pedidos)
       } catch(err) {}
@@ -65,7 +75,7 @@ const GerirConta = () => {
                     </div>
                   </div>
                   <div class="col-sm-1 espacamentoAcompanharPedidos"/>
-                  <div class="col-6" data-aos="zoom-in-down" id="tabelaAcompanharPedidos">
+                  <div class="col-6" data-aos="zoom-in-down" data-aos-once="true" id="tabelaAcompanharPedidos">
                     <table class="tg">
                       <thead>
                         <tr>

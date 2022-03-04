@@ -51,6 +51,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   background-color: #f8e9f0;
+  min-height: -webkit-fill-available;
 }
 
 ::-webkit-scrollbar {

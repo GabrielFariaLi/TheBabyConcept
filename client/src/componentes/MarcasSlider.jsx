@@ -25,7 +25,7 @@ const MarcasSlider = () => {
   
         <div  class="carousel-client">
         {marcasSliders.map(item => (
-          <div data-aos="fade-left" class="slide"><img src={item.img} alt={item.desc}/></div>
+          <div data-aos="fade-left" data-aos-once="true" class="slide"><img src={item.img} alt={item.desc}/></div>
 
           ))}
         </div>

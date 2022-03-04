@@ -11,6 +11,8 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import "./css/produtosCarousel.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js' ;
@@ -73,8 +75,8 @@ const ProdutosCarousel = ({categoria, filtros, organizar}) => {
       try{
         const res = await axiosInstancia.get(
           categoria
-            ? `http://localhost:5000/api/produto?categoria=${categoria}`
-            : `http://localhost:5000/api/produto`
+            ? `/produto?categoria=${categoria}`
+            : `/produto`
         );
         setProdutos(res.data);
         //console.log(res)
@@ -111,9 +113,9 @@ const ProdutosCarousel = ({categoria, filtros, organizar}) => {
   //{console.log(produtosFiltrados)}
   return (  
     
-  <div data-aos="fade-right"
+  <div 
 
-  data-aos-easing="ease-in-sine" className="container mt-5" id="containerProdutosCarousel">
+   className="container mt-5" id="containerProdutosCarousel">
 
   <div className="carousel" data-interval='8000' ref={carousel}>
     {
@@ -124,7 +126,7 @@ const ProdutosCarousel = ({categoria, filtros, organizar}) => {
         <StyledLink to={`/detalhesProduto/${item._id}`} style={{ textDecoration: 'none' }}>
         <div className="item" id="itemProdutosCarousel" key={item._id}>
           <div className="image" id="imagemProdutoCarousel">
-            <img class="imagemProduto" src={item.img} alt={item.titulo} />
+            <LazyLoadImage class="imagemProduto" src={item.img} alt={item.titulo} />
             <Info className="infoProdutoCarousel">
               <Icon>
                 <ShoppingCartOutlined/>
@@ -168,7 +170,7 @@ const ProdutosCarousel = ({categoria, filtros, organizar}) => {
       <StyledLink to={`/detalhesProduto/${item._id}`} style={{ textDecoration: 'none' }}>
       <div className="item" id="itemProdutosCarousel" key={item._id}>
         <div className="image" id="imagemProdutoCarousel">
-          <img class="imagemProduto" src={item.img} alt={item.titulo} />
+          <LazyLoadImage class="imagemProduto" src={item.img} alt={item.titulo} />
           <Info className="infoProdutoCarousel">
             <Icon>
               <ShoppingCartOutlined/>

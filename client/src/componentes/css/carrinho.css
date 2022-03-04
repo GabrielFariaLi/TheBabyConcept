@@ -1,3 +1,23 @@
 .StripeCheckoutModalCarrinho {
   background-color: brown !important;
 }
+
+.quantidadeCompraMobile {
+  visibility: collapse;
+}
+
+.precoCompraMobile {
+  visibility: collapse;
+}
+@media only screen and (max-width: 440px) {
+  .quantidadeCompraMobile {
+    align-self: flex-end;
+    margin-left: 50%;
+    margin-right: 0;
+    visibility: visible;
+  }
+
+  .precoCompraMobile {
+    visibility: visible;
+  }
+}

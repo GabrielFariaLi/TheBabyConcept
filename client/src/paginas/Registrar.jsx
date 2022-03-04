@@ -22,6 +22,10 @@ const Container = styled.div`
   @media only screen and (max-width:821px) {
     height:65vh;
   }
+  @media only screen and (max-width:440px) {
+    height:100vh;
+    padding: 0px 15px 0px 15px;
+  }
 
 `;
 
@@ -39,8 +43,12 @@ const Wrapper = styled.div`
         padding-bottom:50px;
   };
   @media only screen and (max-width:580px) {
+    flex: 1;
+    height: 85vh;
       margin-left:10%;
-      width: 380px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
   };
 `;
 const LinkElement = styled.a`
@@ -55,18 +63,36 @@ const CenterDiv = styled.div`
       //center;
   display:flex;
   justify-content: center;
+
+  @media only screen and (max-width:580px) {
+    background: 
+
+    url("https://firebasestorage.googleapis.com/v0/b/baby-concept20.appspot.com/o/foto%20registrar.jpg?alt=media&token=37cf21cc-faf1-468f-abde-d00ba179d51c") top;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  };
 `;
 const Titulo = styled.h1`
   font-size: 24px;
   font-weight: 300;
   padding-top: 50px;
  padding-bottom: 50px;
+
+ @media only screen and (max-width:580px) {
+  color: #f7f7f7;
+  padding: 50px 15px 50px 15px;
+  };
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  @media only screen and (max-width:580px) {
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+  };
 `;
 
 const Input = styled.input`
@@ -79,13 +105,21 @@ const Input = styled.input`
   @media only screen and (max-width:580px), (max-width:821px) {
       width: 300px;
   };
+  @media only screen and (max-width:580px) {
+    align-self: center;
+  };
 `;
 
 const Acordo = styled.span`
  margin: 5px 0px 25px 0px;
   font-size: 12px;
   margin: 10px 0px 35px 0px;
+
   color: rgba(0,0,0,0.7);
+  @media only screen and (max-width:580px) {
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+  };
 `;
 
 const Button = styled.button`
@@ -99,12 +133,27 @@ const Button = styled.button`
   @media only screen and (max-width:580px), (max-width:821px) {
       width: 300px;
   };
+  @media only screen and (max-width:580px){
+      align-self: center;
+  };
 `;
 
 const ContainerCentralizado = styled.div`
 
   display:flex;
   justify-content:center;
+`;
+
+const ContainerRegistrar = styled.div`
+  display: flex;
+  padding-bottom: 1rem;
+  margin-bottom: 500px;
+  justify-content: center;
+  @media only screen and (max-width:580px) {
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  };
 `;
 const WrapperImagem = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -123,7 +172,7 @@ const WrapperImagem = styled.div`
     width:300px;
     }
   @media only screen and (max-width:580px) {
-      visibility: hidden;
+      display:none;
     }
 
   
@@ -132,6 +181,16 @@ const WrapperImagem = styled.div`
 
 
 const Registrar = () => {
+
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
+
   const [inputs, setInputs] = useState({});
   const [confirmacaoSenha, setConfirmacaoSenha] = useState("");
   const dispatch = useDispatch();
@@ -300,9 +359,14 @@ const Registrar = () => {
           <Button onClick={confirmarInputs}>Criar conta</Button>
 
         </Form>
-        <ContainerCentralizado style={{paddingTop:"1rem"}}>
-          Já faz parte desse conceito? <Link to="/login"><b><u style={{color:"#0000EE",paddingLeft:"5px"}}>  Entre por aqui! </u></b>  </Link> 
-        </ContainerCentralizado>
+        <ContainerRegistrar style={{paddingTop:"1rem"}}>
+        <div style={{alignSelf:"center",textAlign:"center"}}>
+          Já faz parte desse conceito? 
+          <div style={{alignSelf:"center",textAlign:"center"}}>
+          <Link to="/login"><b><u style={{color:"#0000EE",paddingLeft:"5px"}}>  Entre por aqui! </u></b>  </Link> 
+          </div>
+          </div>
+        </ContainerRegistrar>
         
       </Wrapper>
       <WrapperImagem>

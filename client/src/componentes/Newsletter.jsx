@@ -69,7 +69,7 @@ flex-direction: column ;
 const Newsletter = () => {
   return (
     <Container>
-      <DivAosNewsleeter  data-aos="flip-up" data-aos-duration="1000">
+      <DivAosNewsleeter  data-aos="flip-up" data-aos-once="true" data-aos-duration="1000">
       <Titulo>Newsletter</Titulo>
       <Descricao> Nunca perca uma oferta da BabyConcept! Seu bebé vai adorar!</Descricao>
       <InputContainer>
