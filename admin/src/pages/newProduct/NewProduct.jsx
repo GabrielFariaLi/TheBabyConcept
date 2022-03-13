@@ -10,7 +10,7 @@ import app from "../../firebase";
 import { addProduto } from "../../redux/apiChamadas";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-
+import Swal from 'sweetalert2'
 import {marcas,
   triCategoriasRecemNascido,
   triCategoriasMeninaAndBebe,
@@ -45,11 +45,21 @@ export default function NewProduct() {
 
 
   useEffect(() => {
-    setPrincipalCat((prev) => {
-      return { ...prev, [2]:"Saldo"};
-    });
-  }, [inputs.precoAntigo]) // dependencias
+    console.log("teste inicial -> " +  JSON.stringify(principalCat))
+  }, []) // dependencias
 
+  useEffect(() => {
+
+    if (inputs.precoAntigo === undefined || inputs.precoAntigo === '' ) {
+      setPrincipalCat((prev) => {
+        return { ...prev, [2]:""};
+      });
+    }  else     if (inputs.precoAntigo !== undefined ){
+      setPrincipalCat((prev) => {
+        return { ...prev, [2]:"Saldo"};
+      });
+    }
+  }, [inputs.precoAntigo]) // dependencias
   const setFiles = (e) => {
 
     for (let i = 0; i < e.target.files.length; i++) {
@@ -62,24 +72,27 @@ export default function NewProduct() {
     setInputs((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
+    console.log(principalCat)
   };
   const handlePrincipalCat = (e) => {
-    setPrincipalCat([e.target.value]);
+    setPrincipalCat((prev) => {
+      return { ...prev, [0]:e.target.value};
+    });
   };
   const handleNewIn = (e) => {
     const newIn = e.target.value
     console.log(newIn)
     if(newIn === "verdadeiro") {
     setPrincipalCat((prev) => {
-      return { ...prev, ["teste"]:'New in'};
+      return { ...prev, [1]:'New in'};
     });
-    setPrincipalCatArray( Object.values(principalCat));
+
 
   } else if (newIn === "falso") {
     setPrincipalCat((prev) => {
-      return { ...prev, ["teste"]:''};
+      return { ...prev, [1]:''};
     });
-    setPrincipalCatArray( Object.values(principalCat));
+
 
 
   }
@@ -94,7 +107,7 @@ export default function NewProduct() {
 
   };
   const handleTriCat = (e) => {
-    setTriCat(e.target.value.split(","));
+    setTriCat(e.target.value);
   };
   
   const handleMarca = (e) => {
@@ -113,7 +126,17 @@ export default function NewProduct() {
 
 
   const handleClick = (e) => {
-
+    e.preventDefault();
+    if (file === null) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Oops...',
+        text: 'Não se esqueça de adicionar uma nova foto :)',
+        confirmButtonColor: '#0B3C49',
+        confirmButtonText: 'ok'
+      })
+    }
+    else if(file !== null) {
  
     e.preventDefault();
     const fileName = new Date().getTime() + file.name;
@@ -158,6 +181,7 @@ export default function NewProduct() {
         });
       }
     );
+    }
   };
 
 
@@ -344,7 +368,7 @@ export default function NewProduct() {
                     <option selected disabled>---</option>
                     {
                       tamanhosNovosProdutos.map((node) => ( 
-              
+                        
                       <option name={node.name} class="d-flex align-items-center "> {node.tamanho}</option>))
                     }
                     
@@ -372,7 +396,8 @@ export default function NewProduct() {
                   type="button" onClick={handleAddClick}>
                     Adicionar
                 </button>}
-              </div></>
+              </div>
+              </>
      
 
         );
@@ -391,13 +416,10 @@ export default function NewProduct() {
           </select>
         </div>
         <div className="addProductItem">
-          <label>Gostaria de anunciar esse produto em uma promoção?</label>
-      
-            <div class="wrap-collabsible"> 
-              <input id="collapsible" class="toggle" type="checkbox"/> 
-              <label for="collapsible" class="lbl-toggle">Adicione o preço antigo</label>
-              <div class="collapsible-content">
-                <div class="content-inner">
+        <details>
+         
+
+            <summary class="sumario" > Gostaria de anunciar esse produto em uma promoção?</summary>
                   <div className="addProductItem" >
                     <label>Preço  ( em € EUR )</label>
                     <input
@@ -407,10 +429,8 @@ export default function NewProduct() {
                       placeholder="Preço antes da promoção"
                       onChange={handleChange}
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
+                 </div>
+        </details>   
         
         </div>
         

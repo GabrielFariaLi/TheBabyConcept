@@ -104,7 +104,7 @@ export const deleteProduto = async (id, dispatch) => {
 export const updateProduto = async (id, produto, dispatch) => {
   dispatch(updateProdutoInicio());
   try {
-    //const res = await userRequest.put(`/produto/${id}`, produto);
+    const res = await userRequest.put(`/produto/${id}`, produto);
     dispatch(updateProdutoSucesso({ id, produto }));
   } catch (err) {
     dispatch(updateProdutoFalha());

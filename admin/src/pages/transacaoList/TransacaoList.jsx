@@ -30,7 +30,7 @@ export default function TransacaoList() {
   useEffect(() => {
     const getPedidos = async ()=> {
       try{
-        const res = await userRequest.get("http://localhost:5000/api/pedido");
+        const res = await userRequest.get("/pedido");
         setPedidos(res.data);
         console.log(pedidos)
       } catch(err) {}

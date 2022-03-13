@@ -46,7 +46,7 @@ export default function Transacao() {
   useEffect(() => {
     const getPedidosPorID = async ()=> {
       try{
-        const res = await userRequest.get("http://localhost:5000/api/pedido/buscarPedidoId/" + transacaoId);
+        const res = await userRequest.get("/pedido/buscarPedidoId/" + transacaoId);
         setPedido(res.data);
         console.log(pedido)
       } catch(err) {}
